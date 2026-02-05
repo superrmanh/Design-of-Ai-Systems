@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Data (optional: zip if you don't want to track it)
+A3/Cities/
+A3/Cities.zip
+
+# Large/binary (optional)
+*.pdf
