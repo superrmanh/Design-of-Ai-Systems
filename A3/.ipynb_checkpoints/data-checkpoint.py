@@ -29,12 +29,11 @@ X_train, X_val, Y_train, Y_val = train_test_split(X,Y, test_size =0.2, random_st
 from sklearn.preprocessing import StandardScaler
 
 # Here i standardize the data
-""""
+
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 X_test = scaler.transform(X_test)
-"""
 
 # HERE IM CHECKING FOR CLASS IMBLANCAE
 Beijing["PM_HIGH"] = Beijing["PM_HIGH"].astype(int)

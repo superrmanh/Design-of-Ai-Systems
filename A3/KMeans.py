@@ -10,7 +10,6 @@ class kMeans:
 
     # Initialize
     def Initialize(self, X):
-        np.random.seed(0)
         random = np.random.permutation(X.shape[0])
         centroid = X[random[:self.k]]
         return centroid
@@ -23,7 +22,7 @@ class kMeans:
             clusters.append(cluster)
         return np.array(clusters)
 
-    # Iterations
+    # Updating
     def Update(self, X, clusters):
         new_centroids = []
         for i in range(self.k):
@@ -31,8 +30,8 @@ class kMeans:
             mean = np.mean(points, axis=0)
             new_centroids.append(mean)
         return np.array(new_centroids)
-
-    def fit(self, X):
+    # Iterations
+    def train(self, X):
         X = np.asarray(X, dtype=float)
         centroids = self.Initialize(X)
 
@@ -48,4 +47,3 @@ class kMeans:
         return self.Assign(X, self.centroids)
     
 
-        
